@@ -32,7 +32,12 @@ Run the container interactively mounting your `ansible` dir to `/etc/ansible` wi
 docker run -it --rm -v /path/to/your/ansible_dir:/etc/ansible ansible
 ```
 
-Copy the container public SSH key to your hosts.
+Copy the container public SSH key to your hosts. The public key is located at
+
+```bash
+/root/.ssh/id_rsa.pub
+```
+
 **WARNING**: A new public/private keys pair is generate each time you build the docker image.
 
 ## Test
