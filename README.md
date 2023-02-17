@@ -29,7 +29,7 @@ ansible_user=ubuntu
 Run the container interactively mounting your `ansible` dir to `/etc/ansible` withith the container:
 
 ```bash
-docker run -it --rm -v /path/to/your/ansible_dir:/etc/ansible ansible
+docker run -it --rm -v ./ansible:/etc/ansible -v ./playbooks:/playbooks ansible
 ```
 
 Copy the container public SSH key to your hosts. The public key is located at
