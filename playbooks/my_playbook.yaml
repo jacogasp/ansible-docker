@@ -1,0 +1,13 @@
+---
+  - name: MyPlabook
+    hosts: linux
+    become: true
+    tasks:
+      - name: Ensure apache is installed
+        apt:
+          name: apache2
+          state: absent
+      - name: Ensure apache is running
+        service:
+          name: apache2 
+          state: stopped
